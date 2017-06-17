@@ -1,4 +1,4 @@
-# Basic Project
+# Java Project
 ## Basic Project Structure
 
 *Default Structure for A Basic Project*
