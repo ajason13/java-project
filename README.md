@@ -1,7 +1,7 @@
 # Java Project
-## Basic Project Structure
+## Project which covers Java Fundamental Concepts
 
-*Default Structure for A Basic Project*
+*Basic Data Types, Flow Control, and Loops*
 
 **Java 8**
 
