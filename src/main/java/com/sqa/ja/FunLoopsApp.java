@@ -35,7 +35,7 @@ public class FunLoopsApp {
 	 * totalGradePoints / numTotalGrades. Other things covered in this exercise:
 	 * Scanner, Integer.parseInt.
 	 */
-	public static void classAverage() {
+	public static void calcGradeAverage() {
 		Scanner scan = new Scanner(System.in);
 		String cont = "";
 		String gradePoint;
@@ -59,12 +59,51 @@ public class FunLoopsApp {
 	}
 
 	/**
+	 * Write a Java program which prints all even number from 1 to 100, then all
+	 * odd numbers between 300-400, and finally prints 30-333 with only numbers
+	 * evenly divided by 3 . Use a while loop for this exercise. You will also
+	 * want to use an if condition and use the % operator to check if a number %
+	 * 2 is equal to 0 and print it if that is the case.
+	 */
+	public static void whileLoopExercise() {
+		int i = 2;
+		while (i <= 100) {
+			System.out.print(i + " ");
+			if (i % 50 == 0) {
+				System.out.println();
+			}
+			i += 2;
+		}
+		System.out.println();
+		i = 301;
+		while (i <= 400) {
+			System.out.print(i + " ");
+			if (i % 349 == 0) {
+				System.out.println();
+			}
+			i += 2;
+		}
+		System.out.print("\n\n");
+		i = 30;
+		while (i <= 333) {
+			if (i % 3 == 0) {
+				System.out.print(i + " ");
+			}
+			if (i % 90 == 0) {
+				System.out.println();
+			}
+			i++;
+		}
+		System.out.print("\n\n");
+	}
+
+	/**
 	 * Write a Java program which prints out a count from 1 to 100, than prints
 	 * the numbers 200-100, and finally prints 10-1000 with only numbers evenly
 	 * divided by 10. Use the for loop to do these and do not use the %
 	 * operator.
 	 */
-	public static void count1() {
+	public static void doForLoopsExercise() {
 		for (int i = 1; i <= 100; i++) {
 			System.out.print(i + " ");
 			if (i % 20 == 0) {
@@ -89,46 +128,13 @@ public class FunLoopsApp {
 	}
 
 	/**
-	 * Write a Java program which prints all even number from 1 to 100, then all
-	 * odd numbers between 300-400, and finally prints 30-333 with only numbers
-	 * evenly divided by 3 . Use a while loop for this exercise. You will also
-	 * want to use an if condition and use the % operator to check if a number %
-	 * 2 is equal to 0 and print it if that is the case.
-	 */
-	public static void count2() {
-		for (int i = 2; i <= 100; i += 2) {
-			System.out.print(i + " ");
-			if (i % 50 == 0) {
-				System.out.println();
-			}
-		}
-		System.out.println();
-		for (int i = 301; i <= 400; i += 2) {
-			System.out.print(i + " ");
-			if (i % 349 == 0) {
-				System.out.println();
-			}
-		}
-		System.out.print("\n\n");
-		for (int i = 30; i <= 333; i++) {
-			if (i % 3 == 0) {
-				System.out.print(i + " ");
-			}
-			if (i % 90 == 0) {
-				System.out.println();
-			}
-		}
-		System.out.print("\n\n");
-	}
-
-	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		String name = AppBasics.greetUserAndGetName(appName);
-		count1();
-		count2();
-		classAverage();
+		doForLoopsExercise();
+		whileLoopExercise();
+		calcGradeAverage();
 		AppBasics.farewellUser(name);
 	}
 }
